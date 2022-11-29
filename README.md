@@ -1,1 +1,1 @@
-# java-exercises
+# Just some fun Java challanges
