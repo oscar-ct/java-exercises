@@ -1,10 +1,13 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class edgeOfTheOcean {
+public class EdgeOfTheOcean {
 
-    int adjacentElementsProduct (int [] inputArray) {
+
+    int adjacentElementsProduct (int @NotNull [] inputArray) {
         ArrayList<Integer> numList = new ArrayList<>();
         for (int i = 0; i < inputArray.length - 1; i++) {
             numList.add(inputArray[i] * inputArray[i + 1]);
