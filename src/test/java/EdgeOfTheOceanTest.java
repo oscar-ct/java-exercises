@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 public class EdgeOfTheOceanTest {
 
-    EdgeOfTheOcean edgeOfTheOcean = new EdgeOfTheOcean();
+    private final EdgeOfTheOcean edgeOfTheOcean = new EdgeOfTheOcean();
 
     @Test
     public void testAdjacentElementsProducts() {
