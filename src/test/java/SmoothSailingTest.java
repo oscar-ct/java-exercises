@@ -15,4 +15,11 @@ public class SmoothSailingTest {
         Assert.assertArrayEquals(answer2, smoothSailing.allLongestStrings(inputArray2));
     }
 
+    @Test
+    public void testCommonCharacterCount() {
+        String s1 = "abcdefghijklmnopqrstuvwxyz";
+        String s2 = "zyxwvutsrqponmlkjihgfedcba";
+        Assert.assertEquals(26, smoothSailing.commonCharacterCount(s1, s2));
+    }
+
 }
