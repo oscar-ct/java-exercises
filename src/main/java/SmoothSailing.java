@@ -18,4 +18,27 @@ public class SmoothSailing {
         }
         return newStrList.toArray(String[]::new);
     }
+
+
+    public int commonCharacterCount(String s1, String s2) {
+        int maxMatch = 0;
+        for (int i = 0; i < s1.length(); i++) {
+            String s = Character.toString(s1.charAt(i));
+            if (s2.contains(s)) {
+                System.out.println(s2);
+                maxMatch++;
+                s2 = s2.replaceFirst(s, "");
+            }
+        }
+        return maxMatch;
+    }
 }
+
+
+
+
+
+
+
+
+
