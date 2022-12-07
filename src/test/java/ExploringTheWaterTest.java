@@ -40,4 +40,11 @@ public class ExploringTheWaterTest {
         Assert.assertFalse(exploringTheWaters.areSimilar(x, y));
 
     }
+    @Test
+    public void testPalindromeRearranging() {
+        Assert.assertTrue(exploringTheWaters.palindromeRearranging("aabb"));
+        Assert.assertTrue(exploringTheWaters.palindromeRearranging("zyyzzzzz"));
+        Assert.assertFalse(exploringTheWaters.palindromeRearranging("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabc"));
+        Assert.assertFalse(exploringTheWaters.palindromeRearranging("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccccaaaaaaaaaaaaa"));
+    }
 }
