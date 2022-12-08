@@ -48,28 +48,32 @@ public class ExploringTheWaters {
     }
 
     public boolean palindromeRearranging(String inputString) {
-        return true;
-    }
-
-    boolean solution(String inputString) {
         List<Character> s = new ArrayList<>();
-        HashMap<Character, Integer> c = new HashMap<>();
-
+        // extracts single unique char from inputString into arrList
         for (int i = 0; i < inputString.length(); i++) {
             if(!s.contains(inputString.charAt(i))) {
                 s.add(inputString.charAt(i));
             }
         }
-        for (int k = 0; k < s.size(); k++) {
-            c.put(s.get(k), 1);
+        // new arr with total num of char occurrences
+        int[] charCount = new int[s.size()];
+        for (int j = 0; j < s.size(); j++) {
+            int count = 0;
+            for (int k = 0; k < inputString.length(); k++) {
+                if (s.get(j) == inputString.charAt(k)) {
+                    count++;
+                }
+            }
+            charCount[j] = count;
         }
-        for (int j = 0; j < c.size(); j++) {
-
+        // find num of the char odd occurrences
+        int oddCount = 0;
+        for (int l = 0; l < charCount.length; l++) {
+            if (charCount[l] % 2 != 0) {
+                oddCount++;
+            }
         }
-
-        System.out.println(s);
-        System.out.println(c);
-        return true;
+        return oddCount <= 1;
     }
 
 
