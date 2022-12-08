@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -44,4 +46,31 @@ public class ExploringTheWaters {
         }
         return count < 3 && sum == sum2;
     }
+
+    public boolean palindromeRearranging(String inputString) {
+        return true;
+    }
+
+    boolean solution(String inputString) {
+        List<Character> s = new ArrayList<>();
+        HashMap<Character, Integer> c = new HashMap<>();
+
+        for (int i = 0; i < inputString.length(); i++) {
+            if(!s.contains(inputString.charAt(i))) {
+                s.add(inputString.charAt(i));
+            }
+        }
+        for (int k = 0; k < s.size(); k++) {
+            c.put(s.get(k), 1);
+        }
+        for (int j = 0; j < c.size(); j++) {
+
+        }
+
+        System.out.println(s);
+        System.out.println(c);
+        return true;
+    }
+
+
 }
