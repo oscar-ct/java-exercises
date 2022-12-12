@@ -21,38 +21,13 @@ public class IslandOfKnowledgeTest {
         int [] arr2 = {-1, 4 ,10, 3, -2};
         Assert.assertEquals(7, islandOfKnowledge.arrayMaximalAdjacentDifference(arr2));
     }
-    boolean solution(String inputString) {
-        String [] charArr = inputString.split("");
-        String [] numArr = inputString.split("[.]");
-        List<String> acceptableNums = new ArrayList<>();
-        int dotCount = 0;
-        boolean invalidNumCheck = true;
-
-        for (int i = 0; i < charArr.length; i++) {
-            System.out.println(charArr[i]);
-            if (charArr[i].matches("[.]")) {
-                dotCount++;
-            }
-        }
-        for (int j = 0; j < numArr.length; j++) {
-            int n = Integer.parseInt(numArr[j]);
-            if (numArr[j] != "" && n <= 255 && n >= 0) {
-                acceptableNums.add(numArr[j]);
-            }
-        }
-        for (int k = 0; k < acceptableNums.size(); k++) {
-            String [] arr = acceptableNums.get(k).split("");
-            for (int l = 0; l < arr.length; l++) {
-                if (Integer.parseInt(arr[l]) == 0 && arr.length > 1) {
-                    invalidNumCheck = false;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(charArr));
-        System.out.println(Arrays.toString(numArr));
-        System.out.println(dotCount);
-        System.out.println(acceptableNums);
-        return dotCount == acceptableNums.size() - 1 && acceptableNums.size() == 4 && invalidNumCheck;
-
+    @Test
+    public void isIPv4AddressTest() {
+        String s = "172.16.254.1";
+        String s2 = "172.316.254.1";
+        String s3 = ".254.255.0";
+        Assert.assertTrue(islandOfKnowledge.isIPv4Address(s));
+        Assert.assertFalse(islandOfKnowledge.isIPv4Address(s2));
+        Assert.assertFalse(islandOfKnowledge.isIPv4Address(s3));
     }
 }
