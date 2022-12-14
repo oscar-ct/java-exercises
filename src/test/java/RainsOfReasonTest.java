@@ -12,4 +12,9 @@ public class RainsOfReasonTest {
         int[] bSolution = {1, 2, 0, 4, 5};
         Assert.assertArrayEquals(bSolution, rainsOfReason.arrayReplace(b, 3, 0));
     }
+    @Test
+    public void evenDigitsOnlyTest() {
+        Assert.assertTrue(rainsOfReason.evenDigitsOnly(248622));
+        Assert.assertFalse(rainsOfReason.evenDigitsOnly( 7468428));
+    }
 }
