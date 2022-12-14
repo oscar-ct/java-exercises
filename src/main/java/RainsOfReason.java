@@ -1,4 +1,4 @@
-public class ThroughTheFog {
+public class RainsOfReason {
 
     public int[] arrayReplace(int[] inputArray, int elemToReplace, int substitutionElem) {
         for (int i = 0; i < inputArray.length; i++) {
