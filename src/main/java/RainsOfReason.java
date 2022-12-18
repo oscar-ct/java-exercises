@@ -20,4 +20,25 @@ public class RainsOfReason {
         }
         return evenCount == 0;
     }
+
+    boolean variableName(String name) {
+        String ch = Character.toString(name.charAt(0));
+        if (Utils.isNumeric(ch)) {
+            return false;
+        }
+        String lcName = name.toLowerCase();
+        String validChars = "abcdefghijklmnopqrstuvwxyz0123456789_";
+        int count = 0;
+        for (int i = 0; i < lcName.length(); i++) {
+            if (!validChars.contains(Character.toString(lcName.charAt(i)))) {
+                count++;
+            }
+        }
+        return count == 0;
+    }
+
+
+
+
+
 }
