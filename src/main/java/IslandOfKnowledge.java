@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
 public class IslandOfKnowledge {
     public boolean areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
         int[] x = {yourLeft, yourRight};
@@ -36,7 +37,7 @@ public class IslandOfKnowledge {
             if (s.contains("0") && s.length() > 1) {
                 return false;
             }
-            if (isNumeric(s) && s.length() < 4) {
+            if (Utils.isNumeric(s) && s.length() < 4) {
                 int n = Integer.parseInt(s);
                 if (n <= 255 && n >= 0) {
                     acceptableNums.add(n);
@@ -49,20 +50,5 @@ public class IslandOfKnowledge {
         }
         return acceptableNums.size() == 4;
     }
-
-
-
-
-    boolean isNumeric(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-
-
 
 }

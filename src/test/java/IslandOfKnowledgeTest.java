@@ -25,7 +25,7 @@ public class IslandOfKnowledgeTest {
     public void isIPv4AddressTest() {
         String s = "172.16.254.1";
         String s2 = "172.316.254.1";
-        String s3 = ".254.255.0";
+        String s3 = "1a.254.255.0.";
         Assert.assertTrue(islandOfKnowledge.isIPv4Address(s));
         Assert.assertFalse(islandOfKnowledge.isIPv4Address(s2));
         Assert.assertFalse(islandOfKnowledge.isIPv4Address(s3));
