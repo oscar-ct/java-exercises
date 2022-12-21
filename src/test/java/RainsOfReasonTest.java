@@ -17,4 +17,11 @@ public class RainsOfReasonTest {
         Assert.assertTrue(rainsOfReason.evenDigitsOnly(248622));
         Assert.assertFalse(rainsOfReason.evenDigitsOnly( 7468428));
     }
+    @Test
+    public void variableNameTest() {
+        Assert.assertTrue(rainsOfReason.variableName("var_1__Int"));
+        Assert.assertFalse(rainsOfReason.variableName("qq-q"));
+        Assert.assertFalse(rainsOfReason.variableName("a a_2"));
+        Assert.assertTrue(rainsOfReason.variableName("_Aas_23"));
+    }
 }
