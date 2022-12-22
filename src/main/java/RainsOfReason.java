@@ -37,7 +37,31 @@ public class RainsOfReason {
         return count == 0;
     }
 
-
+    boolean chessBoardCellColor(String cell1, String cell2) {
+        String board = "ABCDEFGH";
+        String dark = "";
+        String light = "";
+        for (int i = 0; i < board.length(); i++) {
+            char ch = board.charAt(i);
+            for (int j = 1; j < 9; j++) {
+                String s = Integer.toString(j);
+                if (ch == 'A' || ch == 'C' || ch == 'E' || ch == 'G') {
+                    if (j % 2 != 0) {
+                        dark += ch + s;
+                    } else {
+                        light += ch + s;
+                    }
+                } else {
+                    if (j % 2 == 0) {
+                        dark += ch + s;
+                    } else {
+                        light += ch + s;
+                    }
+                }
+            }
+        }
+        return light.contains(cell1) && light.contains(cell2) || dark.contains(cell1) && dark.contains(cell2);
+    }
 
 
 

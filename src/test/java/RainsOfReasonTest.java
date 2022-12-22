@@ -24,4 +24,12 @@ public class RainsOfReasonTest {
         Assert.assertFalse(rainsOfReason.variableName("a a_2"));
         Assert.assertTrue(rainsOfReason.variableName("_Aas_23"));
     }
+    @Test
+    public void chessBoardCellColorTest() {
+        Assert.assertTrue(rainsOfReason.chessBoardCellColor("A1", "C3"));
+        Assert.assertTrue(rainsOfReason.chessBoardCellColor("A1", "B2"));
+        Assert.assertFalse(rainsOfReason.chessBoardCellColor("C3", "B5"));
+        Assert.assertFalse(rainsOfReason.chessBoardCellColor("A1", "H3"));
+    }
+
 }
