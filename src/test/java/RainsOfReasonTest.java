@@ -38,5 +38,12 @@ public class RainsOfReasonTest {
         Assert.assertEquals(3, rainsOfReason.circleOfNumbers(4, 1));
         Assert.assertEquals(0, rainsOfReason.circleOfNumbers(6, 3));
     }
+    @Test
+    public void depositProfitTest() {
+        Assert.assertEquals(3, rainsOfReason.depositProfit(100, 20, 170));
+        Assert.assertEquals(1, rainsOfReason.depositProfit(100, 1, 101));
+        Assert.assertEquals(6, rainsOfReason.depositProfit(1, 100, 64));
+        Assert.assertEquals(6, rainsOfReason.depositProfit(20, 20, 50));
+    }
 
 }
