@@ -67,6 +67,17 @@ public class RainsOfReason {
         return (n/2 + firstNumber) % n;
     }
 
+    int depositProfit(int deposit, int rate, int threshold) {
+        int total = deposit;
+        int count = 0;
+        while (total < threshold) {
+            double amount = (double)rate / 100 * total;
+            total += amount;
+            count++;
+        }
+        return count;
+    }
+
 
 
 }
