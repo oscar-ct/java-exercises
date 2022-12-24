@@ -63,6 +63,10 @@ public class RainsOfReason {
         return light.contains(cell1) && light.contains(cell2) || dark.contains(cell1) && dark.contains(cell2);
     }
 
+    int circleOfNumbers(int n, int firstNumber) {
+        return (n/2 + firstNumber) % n;
+    }
+
 
 
 }

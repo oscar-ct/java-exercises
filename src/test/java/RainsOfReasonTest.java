@@ -31,5 +31,12 @@ public class RainsOfReasonTest {
         Assert.assertFalse(rainsOfReason.chessBoardCellColor("C3", "B5"));
         Assert.assertFalse(rainsOfReason.chessBoardCellColor("A1", "H3"));
     }
+    @Test
+    public void circleOFNumbersTest() {
+        Assert.assertEquals(7, rainsOfReason.circleOfNumbers(10, 2));
+        Assert.assertEquals(2, rainsOfReason.circleOfNumbers(10, 7));
+        Assert.assertEquals(3, rainsOfReason.circleOfNumbers(4, 1));
+        Assert.assertEquals(0, rainsOfReason.circleOfNumbers(6, 3));
+    }
 
 }
