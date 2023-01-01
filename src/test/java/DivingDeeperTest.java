@@ -9,4 +9,10 @@ public class DivingDeeperTest {
         Assert.assertArrayEquals(new int[]{1, 2, 1, 2, 1, 2, 1, 2}, divingDeeper.extractEachKth(new int[]{1, 2, 1, 2, 1, 2, 1, 2}, 10));
         Assert.assertArrayEquals(new int[]{1, 1, 1, 1}, divingDeeper.extractEachKth(new int[]{1, 2, 1, 2, 1, 2, 1, 2}, 2));
     }
+    @Test
+    public void firstDigitTest() {
+        Assert.assertEquals('1', divingDeeper.firstDigit("var_1__Int"));
+        Assert.assertEquals('9', divingDeeper.firstDigit( "a a_933"));
+        Assert.assertEquals('7', divingDeeper.firstDigit( "a sjkndvjkdnvkjd fvjknjk kjf vkj fg7_933"));
+    }
 }
