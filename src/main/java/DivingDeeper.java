@@ -15,4 +15,16 @@ public class DivingDeeper {
         }
         return a;
     }
+
+    char firstDigit(String inputString) {
+        char ch = 'a';
+        for (int i = 0; i < inputString.length(); i++) {
+            if(Character.isDigit(inputString.charAt(i))) {
+                ch = inputString.charAt(i);
+                break;
+            }
+        }
+        return ch;
+    }
+
 }
