@@ -15,4 +15,10 @@ public class DivingDeeperTest {
         Assert.assertEquals('9', divingDeeper.firstDigit( "a a_933"));
         Assert.assertEquals('7', divingDeeper.firstDigit( "a sjkndvjkdnvkjd fvjknjk kjf vkj fg7_933"));
     }
+    @Test
+    public void differentSymbolsNaiveTest() {
+        Assert.assertEquals(26, divingDeeper.differentSymbolsNaive("abcdefghijklmnopqrstuvwxyz"));
+        Assert.assertEquals(2, divingDeeper.differentSymbolsNaive("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzzzzzzz"));
+        Assert.assertEquals(3, divingDeeper.differentSymbolsNaive("abccccccc"));
+    }
 }
