@@ -27,4 +27,15 @@ public class DivingDeeper {
         return ch;
     }
 
+    int differentSymbolsNaive(String s) {
+        String st = "";
+        for (int i = 0; i < s.length(); i++) {
+            if (!st.contains(Character.toString(s.charAt(i)))) {
+                st += s.charAt(i);
+            }
+        }
+        return st.length();
+    }
+
+
 }
