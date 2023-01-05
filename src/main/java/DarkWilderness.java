@@ -35,4 +35,16 @@ public class DarkWilderness {
         }
         return 0;
     }
+    String longestDigitsPrefix(String inputString) {
+        String s = "";
+        for (int i = 0; i < inputString.length(); i++) {
+            if (Character.isAlphabetic(inputString.charAt(i)) || Character.isWhitespace(inputString.charAt(i))) {
+                break;
+            }
+            System.out.println(inputString.charAt(i));
+            s += inputString.charAt(i);
+        }
+        return s;
+    }
+
 }
