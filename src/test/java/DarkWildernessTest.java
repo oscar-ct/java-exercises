@@ -15,4 +15,10 @@ public class DarkWildernessTest {
         Assert.assertEquals(4, darkWilderness.knapsackLight(4, 3,3,4,4));
         Assert.assertEquals(0, darkWilderness.knapsackLight(10, 2,11,3,1));
     }
+    @Test
+    public void longestDigitsPrefixTest() {
+        Assert.assertEquals("123", darkWilderness.longestDigitsPrefix("123aa1"));
+        Assert.assertEquals("0123456789", darkWilderness.longestDigitsPrefix("0123456789"));
+        Assert.assertEquals("", darkWilderness.longestDigitsPrefix(" \"  3) always check for whitespaces\""));
+    }
 }
