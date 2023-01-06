@@ -46,5 +46,26 @@ public class DarkWilderness {
         }
         return s;
     }
+    int digitDegree(int n) {
+        String s = Integer.toString(n);
+        if (s.length() == 1) {
+            return 0;
+        }
+        int sum = sumDigit(s), count = 1;
+        while (Integer.toString(sum).length() != 1) {
+            sum = sumDigit(Integer.toString(sum));
+            count++;
+        }
+        return count;
+    }
+
+    int sumDigit(String s) {
+        int sum = 0;
+        for (int i = 0; i < s.length(); i++) {
+            sum += Integer.parseInt(Character.toString(s.charAt(i)));
+        }
+        return sum;
+    }
 
 }
+
