@@ -21,4 +21,11 @@ public class DarkWildernessTest {
         Assert.assertEquals("0123456789", darkWilderness.longestDigitsPrefix("0123456789"));
         Assert.assertEquals("", darkWilderness.longestDigitsPrefix(" \"  3) always check for whitespaces\""));
     }
+    @Test
+    public void digitDegreeTest() {
+        Assert.assertEquals(0, darkWilderness.digitDegree(5));
+        Assert.assertEquals(3, darkWilderness.digitDegree(777773));
+        Assert.assertEquals(1, darkWilderness.digitDegree(1000000000));
+        Assert.assertEquals(2, darkWilderness.digitDegree(877));
+    }
 }
