@@ -9,4 +9,11 @@ public class EruptionOfLightTest {
         Assert.assertEquals("usual.com", eruptionOfLight.findEmailDomain("\"very.unusual.@.unusual.com\"@usual.com"));
         Assert.assertEquals("yahoo.com", eruptionOfLight.findEmailDomain("\"much.more unusual\"@yahoo.com"));
     }
+    @Test
+    public void buildPalindromeTest() {
+        Assert.assertEquals("euotmnmtoue", eruptionOfLight.buildPalindrome("euotmn"));
+        Assert.assertEquals("cbdbedffcgcffdebdbc", eruptionOfLight.buildPalindrome("cbdbedffcg"));
+        Assert.assertEquals("aaaabaaaa", eruptionOfLight.buildPalindrome("aaaaba"));
+    }
+
 }
