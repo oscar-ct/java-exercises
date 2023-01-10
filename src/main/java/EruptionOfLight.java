@@ -39,4 +39,33 @@ public class EruptionOfLight {
         }
         return smallest;
     }
+    boolean isMAC48Address(String inputString) {
+        String l = "ABCDEF", n = "0123456789";
+        int c = 0, h = 0;
+        String[] arr = inputString.split("-");
+        System.out.println(Arrays.toString(arr));
+        for (int k = 0; k < inputString.length(); k++) {
+            if (inputString.charAt(k) == '-') {
+                h++;
+            }
+        }
+        if (arr.length != 6 || h != 5) {
+            return false;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            String[] s = arr[i].split("");
+            for (int j = 0; j < s.length - 1; j++) {
+                if (l.contains(s[j]) && n.contains(s[j+1])) {
+                    c++;
+                } else if (l.contains(s[j + 1]) && n.contains(s[j])) {
+                    c++;
+                } else if (n.contains(s[j]) && n.contains(s[j+1])) {
+                    c++;
+                } else if (l.contains(s[j+1]) && l.contains(s[j])) {
+                    c++;
+                }
+            }
+        }
+        return c == 6;
+    }
 }
