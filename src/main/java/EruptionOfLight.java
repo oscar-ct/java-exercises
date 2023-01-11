@@ -68,4 +68,48 @@ public class EruptionOfLight {
         }
         return c == 6;
     }
+    int solution(int[] votes, int k) {
+        // List<int[]> arr = new ArrayList<>();
+        // int[][] arrays = new int[votes.length][votes.length];
+        // System.out.println(Arrays.toString(arrays));
+        Arrays.sort(votes);
+        System.out.println(Arrays.toString(votes));
+        int[] tempArr = votes;
+        String s = "";
+        for (int i = 0; i < votes.length; i++) {
+            tempArr[i] = (tempArr[i] + k);
+            System.out.println(Arrays.toString(tempArr));
+            for (int x = 0; x < tempArr.length; x++) {
+                s += tempArr[x];
+            }
+            // arrays[i] = tempArr;
+            // arr.add(tempArr);
+            tempArr[i] = (tempArr[i] - k);
+            // System.out.println(Arrays.toString(tempArr));
+        }
+        System.out.println(s);
+        String[] n = s.split("");
+        Arrays.sort(n);
+        String sr = "";
+        System.out.println(Arrays.toString(n));
+        for (int l = n.length - 1; l >= 0; l--) {
+            sr += n[l];
+        }
+        System.out.println(sr);
+        int count = 0;
+        for (int y = 0; y < sr.length() - 1; y++) {
+            if (Integer.parseInt(Character.toString(sr.charAt(y))) > Integer.parseInt(Character.toString(sr.charAt(y + 1)))) {
+                count++;
+            }
+        }
+        // for (int j = 0; j < arrays.length; j++) {
+        //     System.out.println(Arrays.toString(arrays[j]));
+        // }
+        // for (int d = 0; d < arrays.length; d++) {
+        //     System.out.println((Arrays.toString(arr.get(d))));
+        // }
+
+        return count;
+    }
+
 }
