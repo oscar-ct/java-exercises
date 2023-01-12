@@ -68,6 +68,25 @@ public class EruptionOfLight {
         }
         return c == 6;
     }
+    int electionWinners(int[] votes, int k) {
+        int max = votes[0], maxVotes = 0, sum = 0;
+        for (int i = 0; i < votes.length; i++) {
+            if (max <= votes[i]) {
+                max = votes[i];
+            }
+        }
+        for (int j = 0; j < votes.length; j++) {
+            if (max == votes[j]) {
+                maxVotes++;
+            }
+        }
+        for (int x = 0; x < votes.length; x++) {
+            if (votes[x] == max && maxVotes == 1 || votes[x] + k > max) {
+                sum++;
+            }
+        }
+        return sum;
+    }
     int solution(int[] votes, int k) {
         // List<int[]> arr = new ArrayList<>();
         // int[][] arrays = new int[votes.length][votes.length];
