@@ -21,5 +21,6 @@ public class RainbowOfClarityTest {
         Assert.assertEquals("CodeFighter", rainbowOfClarity.longestWord("You are the best!!!!!!!!!!!! CodeFighter ever!"));
         Assert.assertEquals("not", rainbowOfClarity.longestWord("To be or not to be"));
         Assert.assertEquals("longest", rainbowOfClarity.longestWord("Hey there I am a short string and !!!! for %% some 13214 reason545454 this is not the longest"));
+        Assert.assertEquals("", rainbowOfClarity.longestWord("1542? ?@#"));
     }
 }
