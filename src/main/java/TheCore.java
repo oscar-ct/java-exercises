@@ -21,4 +21,11 @@ public class TheCore {
 //    int largestNumber(int n) {
 //        return (int)Math.pow(10,n) - 1;
 //    }
+    int candies(int n, int m) {
+        return n * Math.floorDiv(m, n);
+    }
+//    int candies(int n, int m) {
+//        return m - m%n;
+//    }
+
 }
