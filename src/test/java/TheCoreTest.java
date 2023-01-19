@@ -24,4 +24,11 @@ public class TheCoreTest {
         Assert.assertEquals(12, theCore.candies(4, 15));
         Assert.assertEquals(99, theCore.candies(9, 100));
     }
+    @Test
+    public void reverseInParenthesesTest() {
+        Assert.assertEquals("rab", theCore.reverseInParentheses("(bar)"));
+        Assert.assertEquals("foorabbaz", theCore.reverseInParentheses("foo(bar)baz"));
+        Assert.assertEquals("foorabbazmilb", theCore.reverseInParentheses("foo(bar)baz(blim)"));
+        Assert.assertEquals("foobazrabblim", theCore.reverseInParentheses("foo(bar(baz))blim"));
+    }
 }
