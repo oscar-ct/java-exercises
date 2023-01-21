@@ -39,5 +39,11 @@ public class SmoothSailingTest {
         Assert.assertArrayEquals(aSolution, smoothSailing.sortByHeight(a));
         Assert.assertArrayEquals(bSolution, smoothSailing.sortByHeight(b));
     }
-
+    @Test
+    public void reverseInParenthesesTest() {
+        Assert.assertEquals("rab", smoothSailing.reverseInParentheses("(bar)"));
+        Assert.assertEquals("foorabbaz", smoothSailing.reverseInParentheses("foo(bar)baz"));
+        Assert.assertEquals("foorabbazmilb", smoothSailing.reverseInParentheses("foo(bar)baz(blim)"));
+        Assert.assertEquals("foobazrabblim", smoothSailing.reverseInParentheses("foo(bar(baz))blim"));
+    }
 }
