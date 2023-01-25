@@ -24,4 +24,13 @@ public class TheCoreTest {
         Assert.assertEquals(12, theCore.candies(4, 15));
         Assert.assertEquals(99, theCore.candies(9, 100));
     }
+    @Test
+    public void lateRideTest() {
+        Assert.assertEquals(4, theCore.lateRide(240));
+        Assert.assertEquals(14, theCore.lateRide(808));
+        Assert.assertEquals(19, theCore.lateRide(1439));
+        Assert.assertEquals(0, theCore.lateRide(0));
+        Assert.assertEquals(5, theCore.lateRide(23));
+        Assert.assertEquals(8, theCore.lateRide(8));
+    }
 }
