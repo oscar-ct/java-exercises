@@ -27,5 +27,23 @@ public class TheCore {
 //    int candies(int n, int m) {
 //        return m - m%n;
 //    }
-
+    int lateRide(int n) {
+        int hr = 1, min = 0, c = 0, sol = 0;
+        while (60*hr <= n) {
+            hr++;
+        }
+        hr--;
+        c = hr*60;
+        min = n-c;
+        String s = "" + hr + min;
+        for (int i = 0; i < s.length(); i++) {
+            sol += Integer.parseInt(Character.toString(s.charAt(i)));
+        }
+        return sol;
+    }
+//    int lateRide(int n) {
+//        int hours = n/60;
+//        int minutes = n%60;
+//        return hours/10 + hours%10 + minutes/10 + minutes%10;
+//    }
 }
