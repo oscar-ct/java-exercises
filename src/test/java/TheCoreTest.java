@@ -33,4 +33,13 @@ public class TheCoreTest {
         Assert.assertEquals(5, theCore.lateRide(23));
         Assert.assertEquals(8, theCore.lateRide(8));
     }
+    @Test
+    public void phoneCallTest() {
+        Assert.assertEquals(14, theCore.phoneCall(3, 1, 2, 20));
+        Assert.assertEquals(1, theCore.phoneCall(2, 2, 1, 2));
+        Assert.assertEquals(11, theCore.phoneCall(10, 1, 2, 22));
+        Assert.assertEquals(14, theCore.phoneCall(2, 2, 1, 24));
+        Assert.assertEquals(3, theCore.phoneCall(1, 2, 1, 6));
+        Assert.assertEquals(0, theCore.phoneCall(10, 10, 10, 8));
+    }
 }
