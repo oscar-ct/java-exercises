@@ -11,4 +11,7 @@ public class AtTheCrossroads {
         }
         return a;
     }
+//    int extraNumber (int a, int b, int c) {
+//        return a^b^c;
+//    }
 }
