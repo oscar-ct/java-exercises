@@ -24,4 +24,20 @@ public class AtTheCrossroads {
     }
     //  this is a solution to a challenge I could not figure out.  I had to google the solution to this. Credit to user mssk.
     // leaving this here for future reference
+
+    boolean arithmeticExpression(int a, int b, int c) {
+        double d, e, f, g;
+        d = (double) a+b;
+        e = (double) a-b;
+        f = (double) a*b;
+        g = (double) a/b;
+        double[] arr = {d, e, f, g};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == c) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
