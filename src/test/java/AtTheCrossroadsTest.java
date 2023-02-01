@@ -17,4 +17,13 @@ public class AtTheCrossroadsTest {
         Assert.assertEquals(999, atTheCrossroads.extraNumber(99, 999, 99));
         Assert.assertEquals(3, atTheCrossroads.extraNumber(500000000, 3, 500000000));
     }
+    @Test
+    public void arithmeticExpressionTest() {
+        Assert.assertTrue(atTheCrossroads.arithmeticExpression(2, 3, 5));
+        Assert.assertTrue(atTheCrossroads.arithmeticExpression(8, 2, 4));
+        Assert.assertFalse(atTheCrossroads.arithmeticExpression(8, 3, 2));
+        Assert.assertTrue(atTheCrossroads.arithmeticExpression(6, 3, 3));
+        Assert.assertTrue(atTheCrossroads.arithmeticExpression(18, 2, 9));
+        Assert.assertFalse(atTheCrossroads.arithmeticExpression(5, 2, 0));
+    }
 }
