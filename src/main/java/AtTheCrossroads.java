@@ -39,5 +39,17 @@ public class AtTheCrossroads {
         }
         return false;
     }
+    int rangeBitCount(int a, int b) {
+        int c = 0;
+        for (int i = a; i <= b; i++) {
+            String s = Integer.toBinaryString(i);
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == '1') {
+                    c++;
+                }
+            }
+        }
+        return c;
+    }
 
 }
