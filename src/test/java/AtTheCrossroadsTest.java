@@ -26,4 +26,12 @@ public class AtTheCrossroadsTest {
         Assert.assertTrue(atTheCrossroads.arithmeticExpression(18, 2, 9));
         Assert.assertFalse(atTheCrossroads.arithmeticExpression(5, 2, 0));
     }
+    @Test
+    public void rangeBitCountTest() {
+        Assert.assertEquals(11, atTheCrossroads.rangeBitCount(2, 7));
+        Assert.assertEquals(1, atTheCrossroads.rangeBitCount(0, 1));
+        Assert.assertEquals(17, atTheCrossroads.rangeBitCount(1, 10));
+        Assert.assertEquals(3, atTheCrossroads.rangeBitCount(8, 9));
+        Assert.assertEquals(4, atTheCrossroads.rangeBitCount(9, 10));
+    }
 }
