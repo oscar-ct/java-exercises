@@ -51,5 +51,28 @@ public class AtTheCrossroads {
         }
         return c;
     }
+    int arrayPacking(int[] a) {
+        String[] binary = new String[a.length];
+        int index = 0;
+        for (int i = a.length-1; i >= 0; i--) {
+            binary[index++] = convertToBinary(a[i]);
+        }
+        String s = String.join("", binary);
+        return Integer.parseInt(s,2);
+    }
+    // helper method to arrayPacking
+    String convertToBinary(int n) {
+        String s = "";
+        int[] binary = new int[8];
+        int index = 0;
+        while(index < 8){
+            binary[index++] = n % 2;
+            n /= 2;
+        }
+        for (int i = index-1; i >= 0; i--){
+            s += (binary[i]);
+        }
+        return s;
+    }
 
 }
