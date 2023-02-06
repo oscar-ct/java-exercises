@@ -34,4 +34,11 @@ public class AtTheCrossroadsTest {
         Assert.assertEquals(3, atTheCrossroads.rangeBitCount(8, 9));
         Assert.assertEquals(4, atTheCrossroads.rangeBitCount(9, 10));
     }
+    @Test
+    public void arrayPackingTest() {
+        Assert.assertEquals(21784, atTheCrossroads.arrayPacking(new int[] {24, 85, 0}));
+        Assert.assertEquals(2567447, atTheCrossroads.arrayPacking(new int[] {23, 45, 39}));
+        Assert.assertEquals(134480385, atTheCrossroads.arrayPacking(new int[] {1, 2, 4, 8}));
+        Assert.assertEquals(724198331, atTheCrossroads.arrayPacking(new int[] {187, 99, 42, 43}));
+    }
 }
