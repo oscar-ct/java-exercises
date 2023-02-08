@@ -41,4 +41,12 @@ public class AtTheCrossroadsTest {
         Assert.assertEquals(134480385, atTheCrossroads.arrayPacking(new int[] {1, 2, 4, 8}));
         Assert.assertEquals(724198331, atTheCrossroads.arrayPacking(new int[] {187, 99, 42, 43}));
     }
+    @Test
+    public void mirrorBitsTest() {
+        Assert.assertEquals(67, atTheCrossroads.mirrorBits(97));
+        Assert.assertEquals(1, atTheCrossroads.mirrorBits(8));
+        Assert.assertEquals(111, atTheCrossroads.mirrorBits(123));
+        Assert.assertEquals(65173, atTheCrossroads.mirrorBits(86782));
+        Assert.assertEquals(5, atTheCrossroads.mirrorBits(5));
+    }
 }

@@ -74,5 +74,13 @@ public class AtTheCrossroads {
         }
         return s;
     }
+    int mirrorBits(int a) {
+        String s = Integer.toBinaryString(a), r = "";
+        for (int i = s.length()-1; i >= 0; i--) {
+            r += s.charAt(i);
+        }
+        return Integer.parseInt(r, 2);
+    }
+
 
 }
