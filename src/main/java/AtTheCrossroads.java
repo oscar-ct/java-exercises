@@ -81,6 +81,25 @@ public class AtTheCrossroads {
         }
         return Integer.parseInt(r, 2);
     }
+    int leastFactorial(int n) {
+        int factorial = 1, count = 1;
+        while(n > factorial) {
+            factorial = factorial*count;
+            count++;
+        }
+        return factorial;
+    }
 
+    public static void main(String[] args) {
+        System.out.println(factorial(19));
+    }
+
+    public static long factorial(int n) {
+        long fac = 1;
+        for (int i = 1; i <= n; i++) {
+           fac = fac*i;
+        }
+        return fac;
+    }
 
 }
