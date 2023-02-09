@@ -49,4 +49,11 @@ public class AtTheCrossroadsTest {
         Assert.assertEquals(65173, atTheCrossroads.mirrorBits(86782));
         Assert.assertEquals(5, atTheCrossroads.mirrorBits(5));
     }
+    @Test
+    public void leastFactorialTest() {
+        Assert.assertEquals(1, atTheCrossroads.leastFactorial(1));
+        Assert.assertEquals(6, atTheCrossroads.leastFactorial(5));
+        Assert.assertEquals(24, atTheCrossroads.leastFactorial(14));
+        Assert.assertEquals(120, atTheCrossroads.leastFactorial(111));
+    }
 }
