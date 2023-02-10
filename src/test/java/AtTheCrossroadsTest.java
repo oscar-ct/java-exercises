@@ -56,4 +56,11 @@ public class AtTheCrossroadsTest {
         Assert.assertEquals(24, atTheCrossroads.leastFactorial(14));
         Assert.assertEquals(120, atTheCrossroads.leastFactorial(111));
     }
+    @Test
+    public void magicalWellTest() {
+        Assert.assertEquals(8, atTheCrossroads.magicalWell(1, 2 ,2));
+        Assert.assertEquals(1, atTheCrossroads.magicalWell(1, 1 ,1));
+        Assert.assertEquals(128, atTheCrossroads.magicalWell(6, 5 ,3));
+        Assert.assertEquals(0, atTheCrossroads.magicalWell(1601, 337 ,0));
+    }
 }
