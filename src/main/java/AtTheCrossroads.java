@@ -101,5 +101,17 @@ public class AtTheCrossroads {
         }
         return fac;
     }
+    int magicalWell(int a, int b, int n) {
+        if (n == 0) {
+            return 0;
+        }
+        int sum = a*b;
+        for (int i = 1; i < n; i++) {
+            a++;
+            b++;
+            sum += a*b;
+        }
+        return sum;
+    }
 
 }
