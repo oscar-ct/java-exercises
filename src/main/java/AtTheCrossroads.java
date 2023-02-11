@@ -113,5 +113,22 @@ public class AtTheCrossroads {
         }
         return sum;
     }
+    int appleBoxes(int k) {
+        int y = 0, r = 0;
+        for (int i = 0; i <= k; i++) {
+            if (i % 2 == 0) {
+                int e = i*i;
+                r += e;
+                e = 0;
+            } else {
+                System.out.println(i);
+                int o = i*i;
+                y += o;
+                o = 0;
+            }
+        }
+        return r-y;
+    }
+
 
 }
