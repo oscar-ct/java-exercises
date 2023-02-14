@@ -129,6 +129,25 @@ public class AtTheCrossroads {
         }
         return r-y;
     }
+    int rounders(int n) {
+        String s = "";
+        int[] a = new int[Integer.toString(n).length()];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = Integer.parseInt(Character.toString(Integer.toString(n).charAt(i)));
+        }
+        for (int j = a.length-1; j >= 1; j--) {
+            if (a[j] >= 5) {
+                a[j] = 0;
+                a[j-1] = a[j-1] + 1;
+            } else {
+                a[j] = 0;
+            }
+        }
+        for (int k = 0; k < a.length; k++) {
+            s += a[k];
+        }
+        return Integer.parseInt(s);
+    }
 
 
 }
