@@ -63,4 +63,20 @@ public class AtTheCrossroadsTest {
         Assert.assertEquals(128, atTheCrossroads.magicalWell(6, 5 ,3));
         Assert.assertEquals(0, atTheCrossroads.magicalWell(1601, 337 ,0));
     }
+    @Test
+    public void appleBoxesTest() {
+        Assert.assertEquals(-15, atTheCrossroads.appleBoxes(5));
+        Assert.assertEquals(-120, atTheCrossroads.appleBoxes(15));
+        Assert.assertEquals(666, atTheCrossroads.appleBoxes(36));
+        Assert.assertEquals(-1, atTheCrossroads.appleBoxes(1));
+        Assert.assertEquals(105, atTheCrossroads.appleBoxes(14));
+    }
+    @Test
+    public void roundersTest() {
+        Assert.assertEquals(20, atTheCrossroads.rounders(15));
+        Assert.assertEquals(1000, atTheCrossroads.rounders(1234));
+        Assert.assertEquals(2000, atTheCrossroads.rounders(1445));
+        Assert.assertEquals(10, atTheCrossroads.rounders(14));
+        Assert.assertEquals(10, atTheCrossroads.rounders(10));
+    }
 }
