@@ -148,6 +148,37 @@ public class AtTheCrossroads {
         }
         return Integer.parseInt(s);
     }
+    int[] createArray(int size) {
+        int[] a = new int[size];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = 1;
+        }
+        return a;
+    }
+    int[] arrayReplace(int[] inputArray, int elemToReplace, int substitutionElem) {
+        for (int i = 0; i < inputArray.length; i++) {
+            if (inputArray[i] == elemToReplace) {
+                inputArray[i] = substitutionElem;
+            }
+        }
+        return inputArray;
+    }
+    int[] firstReverseTry(int[] arr) {
+        int[] l = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            l[i] = arr[i];
+        }
+        for (int j = 0; j < l.length; j++) {
+            if (j == 0) {
+                arr[j] = l[l.length-1];
+            } else if (j == l.length-1) {
+                arr[l.length-1] = l[0];
+            }
+        }
+        return arr;
+    }
+
+
 
 
 }
