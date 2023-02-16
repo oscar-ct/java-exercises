@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class AtTheCrossroads {
     boolean reachNextLevel(int experience, int threshold, int reward) {
         return threshold <= experience+reward;
@@ -177,6 +179,42 @@ public class AtTheCrossroads {
         }
         return arr;
     }
+    int[] concatenateArrays(int[] a, int[] b) {
+        int[] arr = new int[a.length+b.length];
+        for(int i = 0; i < a.length; i++) {
+            arr[i] = a[i];
+        }
+        int index = 0;
+        for(int j = a.length; j < b.length+a.length; j++) {
+            arr[j] = b[index];
+            index++;
+        }
+        return arr;
+    }
+    int[] removeArrayPart(int[] inputArray, int l, int r) {
+        ArrayList<Integer> a = new ArrayList<>();
+        for (int i = 0; i < inputArray.length; i++) {
+            if (i < l || i > r) {
+                a.add(inputArray[i]);
+            }
+        }
+        int[] arr = new int[a.size()];
+        for (int j = 0; j < arr.length; j++) {
+            arr[j] = a.get(j);
+        }
+        return arr;
+    }
+    boolean isSmooth(int[] arr) {
+        int l = arr.length, s = arr[0], m = 0, e = arr[l-1];
+        if (l % 2 == 0) {
+            m += (arr[l/2] + arr[l/2-1]);
+        } else {
+            m += arr[l/2];
+        }
+        return s == m && e == m;
+    }
+
+
 
 
 
