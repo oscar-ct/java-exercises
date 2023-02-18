@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AtTheCrossroads {
     boolean reachNextLevel(int experience, int threshold, int reward) {
@@ -212,6 +213,32 @@ public class AtTheCrossroads {
             m += arr[l/2];
         }
         return s == m && e == m;
+    }
+    int[] replaceMiddle(int[] arr) {
+        int l = arr.length, m = arr[l/2] + arr[l/2-1];
+        if (l % 2 != 0) {
+            return arr;
+        }
+        int[] a = new int[l-1];
+        for (int i = 0, c = 0; i < l; i++) {
+            if (i != l/2 && i != l/2-1) {
+                a[c] += arr[i];
+                c++;
+            } else if (i == l/2){
+                a[c] += m;
+                c++;
+            }
+        }
+        return a;
+    }
+    int makeArrayConsecutive(int[] statues) {
+        Arrays.sort(statues);
+        int min = statues[0], max = statues[statues.length-1], i = 1;
+        while (min < max) {
+            min++;
+            i++;
+        }
+        return i-statues.length;
     }
 
 
