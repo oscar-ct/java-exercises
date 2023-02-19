@@ -240,6 +240,10 @@ public class AtTheCrossroads {
         }
         return i-statues.length;
     }
+    // solution by user bandorthild
+//    int makeArrayConsecutive(int[] statues) {
+//        Arrays.sort(statues);
+//        return statues[statues.length-1] - statues[0] - statues.length + 1;}
 
 
 
