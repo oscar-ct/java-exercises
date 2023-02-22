@@ -246,6 +246,24 @@ public class AtTheCrossroads {
 //        return statues[statues.length-1] - statues[0] - statues.length + 1;}
 
 
+    String encloseInBrackets(String inputString) {
+        return '(' + inputString + ')';
+    }
+    String properNounCorrection(String noun) {
+        return Character.toString(noun.charAt(0)).toUpperCase() + noun.substring(1).toLowerCase();
+    }
+    boolean isTandemRepeat(String inputString) {
+        if (inputString.length() % 2 != 0) {
+            return false;
+        }
+        String s = inputString.substring(0, inputString.length()/2);
+        String e = inputString.substring(inputString.length()/2);
+        return s.equals(e);
+    }
+
+
+
+
 
 
 
