@@ -260,6 +260,21 @@ public class AtTheCrossroads {
         String e = inputString.substring(inputString.length()/2);
         return s.equals(e);
     }
+    boolean isCaseInsensitivePalindrome(String inputString) {
+        String rev = "";
+        for (int i = inputString.length()-1; i >= 0; i--) {
+            rev += inputString.charAt(i);
+        }
+        if (inputString.equals(rev)) {
+            return true;
+        } else return inputString.equalsIgnoreCase(rev);
+    }
+    String findEmailDomain(String address) {
+        String[] s = address.split("@");
+        return s[s.length-1];
+    }
+
+
 
 
 
