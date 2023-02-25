@@ -273,6 +273,17 @@ public class AtTheCrossroads {
         String[] s = address.split("@");
         return s[s.length-1];
     }
+    String HTMLEndTagByStartTag(String startTag) {
+        String[] a = startTag.split(" ");
+        String tag = "", s = a[0];
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != '<' && s.charAt(i) != '>') {
+                tag += s.charAt(i);
+            }
+        }
+        return "</" + tag + ">";
+    }
+
 
 
 
